@@ -1,0 +1,57 @@
+// Imports
+@import "../System/ga.cocoascript";
+
+// On Run
+var onRun = function(context) {
+
+  // Setup
+  var doc = context.document;
+  var selection = context.selection;
+  var selectionHasTextLayer = false;
+  var strings = [];
+
+  // Check Selection
+  if (selection.count() == 2) {
+    var loop = selection.objectEnumerator();
+    while (layer = loop.nextObject()) {
+      if (layer.class() == "MSTextLayer") {
+				selectionHasTextLayer = true;
+
+        // Collect stringslis
+        strings.push(layer.stringValue());
+      }
+    }
+
+		// Check strings
+		if (strings.length == 2) {
+			var i = strings.length-1;
+			loop = selection.objectEnumerator();
+			while (layer = loop.nextObject()) {
+				layer.setStringValue(strings[i]);
+				i--;
+			}
+
+			// Finish
+			doc.showMessage("Text swapped");
+
+		} else {
+
+			// No text layers selected
+	    doc.showMessage("Please select two text layers");
+		}
+
+    // No text layers selected
+    if (!selectionHasTextLayer) {
+      doc.showMessage("Your selection contains no text layers");
+    }
+
+  } else {
+
+    // No text layers selected
+    doc.showMessage("Please select two text layers");
+  }
+
+  // Stats
+  ga(context, "UA-114431439-1", "Text", context.command.identifier());
+
+};

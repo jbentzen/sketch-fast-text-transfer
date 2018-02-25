@@ -1,0 +1,44 @@
+// Imports
+@import "../System/ga.cocoascript";
+
+// On Run
+var onRun = function(context) {
+
+  // Setup
+  var doc = context.document;
+  var selection = context.selection;
+  var selectionHasTextLayer = false;
+
+  // Get string
+  var string = NSPasteboard.generalPasteboard().stringForType(NSPasteboardTypeString);
+
+  // Check Selection
+  if (selection.count() > 0) {
+    var loop = selection.objectEnumerator();
+    while (layer = loop.nextObject()) {
+      if (layer.class() == "MSTextLayer") {
+        selectionHasTextLayer = true;
+
+        // Set string
+        layer.setStringValue(string);
+
+        // Finish
+        doc.showMessage("Text pasted");
+      }
+    }
+
+    // No text layer(s) selected
+    if (!selectionHasTextLayer) {
+      doc.showMessage("Your selection contains no text layer(s)");
+    }
+
+  } else {
+
+    // No text layer selected
+    doc.showMessage("Please select a text layer");
+  }
+
+  // Stats
+  ga(context, "UA-114431439-1", "Text", context.command.identifier());
+
+};

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Fast Text Transfer</title>
+    <link>https://raw.githubusercontent.com/jbentzen/sketch-fast-text-transfer/master/.appcast.xml</link>
+    <description>Lightning fast copying, pasting and swaping text.</description>
+    <language>en</language>
+    <item>
+      <title>Release v1.0.0</title>
+      <description>Inital release.</description>
+      <enclosure url="https://github.com/jbentzen/sketch-fast-text-transfer/releases/download/v1.0.0/Fast.Text.Transfer.sketchplugin.zip" sparkle:version="1.0" />
+    </item>
+  </channel>
+</rss>

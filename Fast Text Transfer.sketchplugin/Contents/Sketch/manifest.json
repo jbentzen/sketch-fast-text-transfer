@@ -1,0 +1,48 @@
+{
+  "name": "Fast Text Transfer",
+  "description": "Lightning fast copying, pasting and swaping text.",
+  "author": "Jesper Bentzen",
+  "homepage": "https://github.com/jbentzen/sketch-fast-text-transfer",
+  "appcast": "https://raw.githubusercontent.com/jbentzen/sketch-fast-text-transfer/master/.appcast.xml",
+  "version": "1.0.0",
+  "identifier": "com.jesperbentzen.sketch.fast-text-transfer",
+  "compatibleVersion": "46.0",
+  "bundleVersion": "1",
+  "commands": [
+    {
+      "name": "Fast Copy Text",
+      "identifier": "fast_copy_text",
+      "handler": "onRun",
+      "shortcut": "cmd option ctrl c",
+      "script": "Text/fast-copy-text.cocoascript",
+      "icon": "Icons/fast-copy-text.png",
+      "description" : "Copy text from text layer to clipboard."
+    },
+    {
+      "name": "Fast Paste Text",
+      "identifier": "fast_paste_text",
+      "handler": "onRun",
+      "shortcut": "cmd option ctrl v",
+      "script": "Text/fast-paste-text.cocoascript",
+      "icon": "Icons/fast-paste-text.png",
+      "description" : "Paste text from clipboard to text layer(s)."
+    },
+    {
+      "name": "Fast Swap Text",
+      "identifier": "fast_swap_text",
+      "handler": "onRun",
+      "shortcut": "cmd option ctrl s",
+      "script": "Text/fast-swap-text.cocoascript",
+      "icon": "Icons/fast-swap-text.png",
+      "description" : "Swap text between two text layers."
+    }
+  ],
+  "menu": {
+    "title": "Fast Text Transfer",
+    "items": [
+      "fast_copy_text",
+      "fast_paste_text",
+      "fast_swap_text"
+    ]
+  }
+}
