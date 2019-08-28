@@ -16,11 +16,11 @@ Works with [Sketch](https://sketchapp.com) 46 or later.
 
 ## Installation
 
-#### Install with Sketch Runner
-With Sketch Runner, just go to the `install` command and search for `Fast Text Transfer`. Runner allows you to manage plugins and do much more to speed up your workflow in Sketch.
+#### Install with Runner Pro
+With Runner Pro for Sketch, just go to the `install` command and search for `Fast Text Transfer`. Runner Pro allows you to manage plugins and do much more to speed up your workflow in Sketch.
 
 <a href="http://sketchrunner.com">
-  <img img width="170" height="40" src="http://sketchrunner.com/img/Runner_badge_blue_160x40.png">
+  <img img width="166" height="40" src="docs/runner-pro.png">
 </a>
 
 
